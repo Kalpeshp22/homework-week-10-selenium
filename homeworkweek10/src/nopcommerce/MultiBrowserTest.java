@@ -43,11 +43,11 @@ public class MultiBrowserTest {
 
         WebElement emailField = driver.findElement(By.id("Email"));
 
-        emailField.sendKeys("tomsmith");
+        emailField.sendKeys("admin321@gmail.com");
 
         WebElement passwordField = driver.findElement(By.name("Password"));
 
-        passwordField.sendKeys("SuperSecret");
+        passwordField.sendKeys("admin123");
         driver.close();
     }
 }

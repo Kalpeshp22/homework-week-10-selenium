@@ -18,7 +18,7 @@ public class ChromeBrowserTesting {
 
         driver.manage().window().maximize(); // using manage method we maximise windows
 
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
         String title = driver.getTitle();
         System.out.println(title);
@@ -28,11 +28,11 @@ public class ChromeBrowserTesting {
 
         WebElement emailField =driver.findElement(By.id("user-name"));
 
-        emailField.sendKeys("prime321@gamil.com");
+        emailField.sendKeys("admi321@gamil.com");
 
-        WebElement passwordField = driver.findElement(By.id("password"));
+        WebElement passwordField = driver.findElement(By.name("password"));
 
-        passwordField.sendKeys("prime123");
+        passwordField.sendKeys("admin123");
 
         //  Close the browser
         driver.close();;

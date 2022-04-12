@@ -11,7 +11,7 @@ import java.time.Duration;
 
 public class FireFoxBrowserTesting {
     public static void main(String[] args) { // main method
-        String baseURL = "http://the-internet.herokuapp.com/login/"; // 1ST STEPE
+        String baseURL = "http://the-internet.herokuapp.com/login"; // 1ST STEPE
         System.setProperty("webdriver.gecko.driver", "drivers/geckodriver.exe");
 
         WebDriver driver = new FirefoxDriver(); // Web driver is object
@@ -30,11 +30,11 @@ public class FireFoxBrowserTesting {
 
         WebElement emailField = driver.findElement(By.id("username"));
 
-        emailField.sendKeys("tomsmith");
+        emailField.sendKeys("admin321@gmail.com");
 
         WebElement passwordField = driver.findElement(By.name("password"));
 
-        passwordField.sendKeys("SuperSecret");
+        passwordField.sendKeys("admin123");
 
 
         //  Close the browser

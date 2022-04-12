@@ -29,11 +29,11 @@ public class FireFoxBrowserTesting {
 
         WebElement emailFeild = driver.findElement(By.id("Email"));
 
-        emailFeild.sendKeys("Prime321@gmail.com");
+        emailFeild.sendKeys("admin321@gmail.com");
 
         WebElement passwordFeild = driver.findElement(By.name("Password"));
 
-        passwordFeild.sendKeys("Prime321");
+        passwordFeild.sendKeys("admin123");
 
         driver.close();
 

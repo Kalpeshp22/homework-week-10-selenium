@@ -10,7 +10,7 @@ import java.time.Duration;
 
 public class EdgeBrowerTesting {
     public static void main(String[] args) { // main method
-        String baseURL = "http://the-internet.herokuapp.com/login/"; // 1ST STEPE
+        String baseURL = "http://the-internet.herokuapp.com/login"; // 1ST STEPE
         System.setProperty("webdriver.edge.driver", "drivers/msedgedriver.exe");
 
         WebDriver driver = new EdgeDriver(); // Web driver is object
@@ -29,11 +29,11 @@ public class EdgeBrowerTesting {
 
         WebElement emailField =driver.findElement(By.id("username"));
 
-        emailField.sendKeys("tomsmith");
+        emailField.sendKeys("admin321@gmail.com");
 
         WebElement passwordField = driver.findElement(By.name("password"));
 
-        passwordField.sendKeys("SuperSecret");
+        passwordField.sendKeys("admin123");
 
 
         //  Close the browser

@@ -11,9 +11,9 @@ import java.time.Duration;
 public class EdgeBrowerTesting {
     public static void main(String[] args) { // main method
         String baseURL = "https://www.saucedemo.com/"; // 1ST STEPE
-        System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
+        System.setProperty("webdriver.edge.driver", "drivers/msedgedriver.exe");
 
-        WebDriver driver = new ChromeDriver(); // Web driver is object
+        WebDriver driver = new EdgeDriver(); // Web driver is object
 
         driver.get(baseURL);// no return type  // using driver.get method
 
@@ -29,9 +29,9 @@ public class EdgeBrowerTesting {
 
         WebElement emailField =driver.findElement(By.id("user-name"));
 
-        emailField.sendKeys("prime123@gamil.com");
+        emailField.sendKeys("admin123@gamil.com");
 
-        WebElement passwordField = driver.findElement(By.id("password"));
+        WebElement passwordField = driver.findElement(By.name("password"));
 
         passwordField.sendKeys("prime123");
 

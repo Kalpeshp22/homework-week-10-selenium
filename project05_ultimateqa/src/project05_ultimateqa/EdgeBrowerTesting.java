@@ -4,15 +4,17 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 
+import java.sql.Driver;
 import java.time.Duration;
 
 public class EdgeBrowerTesting {
     public static void main(String[] args) { // main method
         String baseURL = "https://courses.ultimateqa.com/users/sign_in"; // 1ST STEPE
-        System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
+        System.setProperty("webdriver.edge.driver", "drivers/msedgedriver.exe");
 
-        WebDriver driver = new ChromeDriver(); // Web driver is object
+        WebDriver driver = new EdgeDriver(); // Web driver is object
 
         driver.get(baseURL);// no return type  // using driver.get method
 
@@ -28,11 +30,11 @@ public class EdgeBrowerTesting {
 
         WebElement emailField =driver.findElement(By.id("user[email]"));
 
-        emailField.sendKeys("tomsmith");
+        emailField.sendKeys("admin321@gmail.com");
 
         WebElement passwordField = driver.findElement(By.name("user[password]"));
 
-        passwordField.sendKeys("SuperSecret");
+        passwordField.sendKeys("admin123");
 
 
         //  Close the browser

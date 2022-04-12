@@ -45,7 +45,7 @@ public class MultiBrowserTest {
 
         emailField.sendKeys("prime123@gmail.com");
 
-        WebElement passwordField = driver.findElement(By.id("password"));
+        WebElement passwordField = driver.findElement(By.name("password"));
 
         passwordField.sendKeys("prime123");
         driver.close();

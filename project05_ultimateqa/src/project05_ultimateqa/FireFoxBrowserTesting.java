@@ -4,15 +4,17 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
+import java.sql.Driver;
 import java.time.Duration;
 
 public class FireFoxBrowserTesting {
     public static void main(String[] args) { // main method
         String baseURL = "https://courses.ultimateqa.com/users/sign_in"; // 1ST STEPE
-        System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
+        System.setProperty("webdriver.gecko.driver", "drivers/geckodriver.exe");
 
-        WebDriver driver = new ChromeDriver(); // Web driver is object
+        WebDriver driver = new FirefoxDriver(); // Web driver is object
 
         driver.get(baseURL);// no return type  // using driver.get method
 
@@ -28,11 +30,11 @@ public class FireFoxBrowserTesting {
 
         WebElement emailField = driver.findElement(By.id("user[email]"));
 
-        emailField.sendKeys("tomsmith");
+        emailField.sendKeys("admin321@gamil.com");
 
         WebElement passwordField = driver.findElement(By.name("user[password]"));
 
-        passwordField.sendKeys("SuperSecret");
+        passwordField.sendKeys("admin123");
 
 
         //  Close the browser

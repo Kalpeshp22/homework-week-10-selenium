@@ -12,7 +12,7 @@ import java.time.Duration;
 public class MultiBrowserTest {
 
     static String browser = "edge";
-    static String baseURL = "https://opensource-demo.orangehrmlive.com/";
+    static String baseURL = "http://the-internet.herokuapp.com/login";
     static WebDriver driver;
 
     public static void main(String[] args) {
@@ -34,7 +34,7 @@ public class MultiBrowserTest {
 
         driver.get(baseURL);
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(13));
 
         String title = driver.getTitle();
         System.out.println(title);
@@ -42,13 +42,13 @@ public class MultiBrowserTest {
         System.out.println("Current URl = " + driver.getCurrentUrl());
         System.out.println("page source:" + driver.getPageSource());
 
-        WebElement emailField = driver.findElement(By.id("txtUsername"));
+        WebElement emailField = driver.findElement(By.id("username"));
 
-        emailField.sendKeys("tomsmith");
+        emailField.sendKeys("admin321@gmail.com");
 
-        WebElement passwordField = driver.findElement(By.name("txtPassword"));
+        WebElement passwordField = driver.findElement(By.name("password"));
 
-        passwordField.sendKeys("SuperSecret");
+        passwordField.sendKeys("admin123");
         driver.close();
 
      }
